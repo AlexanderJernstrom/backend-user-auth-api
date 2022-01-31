@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { initDB } from "./database/initDB.js";
 import { config } from "dotenv";
 import { register } from "./routes/register.js";
@@ -26,7 +27,7 @@ const databaseENVs = {
 const init = async () => {
   const app = express();
   app.use(express.json());
-
+  app.use(cors());
   client = await initDB(databaseENVs);
   await client.connect();
 
