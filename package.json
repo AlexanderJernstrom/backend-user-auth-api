@@ -1,0 +1,20 @@
+{
+  "name": "backend-test-case",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1"
+  }
+}
