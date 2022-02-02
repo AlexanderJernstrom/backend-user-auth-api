@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "pm2 start src/index.js --watch"
+    "start": "nodemon src/index.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
