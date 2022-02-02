@@ -24,11 +24,13 @@ const databaseENVs = {
   port: process.env.DB_PORT,
 };
 
+const formattedConnectionString = `postgresql://${databaseENVs.user}:${databaseENVs.password}@${databaseENVs.host}:${databaseENVs.port}/${databaseENVs.database}`;
+
 const init = async () => {
   const app = express();
   app.use(express.json());
   app.use(cors());
-  client = await initDB(databaseENVs);
+  client = await initDB(process.env.DATABASE_URL || formattedConnectionString);
   await client.connect();
 
   app.get("/", (req, res) => {

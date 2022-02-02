@@ -1,9 +1,9 @@
 import pg from "pg";
 const { Client } = pg;
 
-export const initDB = async ({ user, host, database, password, port }) => {
+export const initDB = async (connectionString) => {
   try {
-    const client = new Client({ user, host, database, password, port });
+    const client = new Client({ connectionString });
     return client;
   } catch (error) {
     throw new Error(error);
