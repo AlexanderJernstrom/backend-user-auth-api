@@ -5,7 +5,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "pm2 start src/index.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -16,6 +17,7 @@
     "jsonwebtoken": "^8.5.1",
     "nodemailer": "^6.7.2",
     "nodemon": "^2.0.15",
-    "pg": "^8.7.1"
+    "pg": "^8.7.1",
+    "pm2": "^5.1.2"
   }
 }
